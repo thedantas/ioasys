@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'ioasys' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ioasys
+  pod 'SwiftLint'
+  pod 'Alamofire'
+  pod 'RealmSwift' 
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'lottie-ios'
+  pod 'SwiftyJSON'
+  pod 'AlamofireObjectMapper', '~> 5.2'
+  pod 'NVActivityIndicatorView'
+  pod 'ObjectMapper', '~> 3.3'
+
+  target 'ioasysTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ioasysUITests' do
+    # Pods for testing
+  end
+
+end
