@@ -1,68 +1,91 @@
 PODS:
   - Alamofire (4.9.1)
-  - AlamofireObjectMapper (5.2.1):
-    - Alamofire (~> 4.7)
-    - ObjectMapper (~> 3.4)
   - lottie-ios (3.1.5)
-  - NVActivityIndicatorView (4.8.0):
-    - NVActivityIndicatorView/Presenter (= 4.8.0)
-  - NVActivityIndicatorView/Presenter (4.8.0)
-  - ObjectMapper (3.5.1)
-  - Realm (4.3.0):
-    - Realm/Headers (= 4.3.0)
-  - Realm/Headers (4.3.0)
-  - RealmSwift (4.3.0):
-    - Realm (= 4.3.0)
-  - RxCocoa (5.0.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxRelay (5.0.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Moya/RxSwift (13.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+  - ReachabilitySwift (5.0.0)
+  - Result (4.1.0)
+  - Reusable (4.1.0):
+    - Reusable/Storyboard (= 4.1.0)
+    - Reusable/View (= 4.1.0)
+  - Reusable/Storyboard (4.1.0)
+  - Reusable/View (4.1.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxGesture (2.2.0):
+    - RxCocoa (~> 4.5)
+    - RxSwift (~> 4.5)
+  - RxSwift (4.5.0)
+  - RxSwiftExt (3.4.0):
+    - RxSwiftExt/Core (= 3.4.0)
+    - RxSwiftExt/RxCocoa (= 3.4.0)
+  - RxSwiftExt/Core (3.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwiftExt/RxCocoa (3.4.0):
+    - RxCocoa (~> 4.0)
+    - RxSwiftExt/Core
+  - RxSwiftUtilities (2.0.1):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
   - SwiftLint (0.38.2)
-  - SwiftyJSON (5.0.0)
+  - Swinject (2.0.0)
 
 DEPENDENCIES:
-  - Alamofire
-  - AlamofireObjectMapper (~> 5.2)
   - lottie-ios
-  - NVActivityIndicatorView
-  - ObjectMapper (~> 3.3)
-  - RealmSwift
-  - RxCocoa (~> 5)
-  - RxSwift (~> 5)
+  - Moya/RxSwift
+  - R.swift
+  - ReachabilitySwift
+  - Reusable
+  - RxCocoa
+  - RxGesture
+  - RxSwift
+  - RxSwiftExt
+  - RxSwiftUtilities (~> 2.0.1)
   - SwiftLint
-  - SwiftyJSON
+  - Swinject (~> 2.0.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AlamofireObjectMapper
     - lottie-ios
-    - NVActivityIndicatorView
-    - ObjectMapper
-    - Realm
-    - RealmSwift
+    - Moya
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
+    - Result
+    - Reusable
     - RxCocoa
-    - RxRelay
+    - RxGesture
     - RxSwift
+    - RxSwiftExt
+    - RxSwiftUtilities
     - SwiftLint
-    - SwiftyJSON
+    - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
-  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
-  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
-  Realm: 9357c3589555793e1860a7104a7412bca4a48d99
-  RealmSwift: 402f1e379a8ef82c635313037b043f0f06de880c
-  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
-  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
-  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxGesture: c1b7bf17166b0ef9d642a9510f8bac5785f18990
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
+  RxSwiftUtilities: 0edb01ef16c527c10fb352485b62cbd951e4a04d
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
 
-PODFILE CHECKSUM: eb1ddeba1d9b0256163fc43e23fe357e9b20936b
+PODFILE CHECKSUM: 8d22e149bdff4258a8cc53a81506fba65ca3420e
 
 COCOAPODS: 1.9.0.beta.2

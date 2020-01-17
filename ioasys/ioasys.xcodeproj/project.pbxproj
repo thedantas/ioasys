@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2D54BE5075BA14082F00378D /* Pods_ioasys_ioasysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2782A773C2C28B1AED70667F /* Pods_ioasys_ioasysUITests.framework */; };
+		5001BB5023D2265B009298BA /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB4F23D2265B009298BA /* DataServices.swift */; };
+		5001BB5423D22C69009298BA /* Coordination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB5323D22C69009298BA /* Coordination.swift */; };
+		5001BB5623D22C9F009298BA /* AppCoordination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB5523D22C9F009298BA /* AppCoordination.swift */; };
+		5001BB5A23D22D24009298BA /* UserDefaultDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB5923D22D24009298BA /* UserDefaultDataStorage.swift */; };
+		5001BB5C23D22D64009298BA /* UserDefaultsDataStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB5B23D22D64009298BA /* UserDefaultsDataStorageImpl.swift */; };
 		50F84D4823D1E9B5006FCB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D4723D1E9B5006FCB10 /* AppDelegate.swift */; };
 		50F84D4A23D1E9B5006FCB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D4923D1E9B5006FCB10 /* SceneDelegate.swift */; };
 		50F84D4C23D1E9B5006FCB10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D4B23D1E9B5006FCB10 /* ViewController.swift */; };
@@ -17,9 +22,6 @@
 		50F84D5723D1E9BC006FCB10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F84D5523D1E9BC006FCB10 /* LaunchScreen.storyboard */; };
 		50F84D6223D1E9BC006FCB10 /* ioasysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D6123D1E9BC006FCB10 /* ioasysTests.swift */; };
 		50F84D6D23D1E9BC006FCB10 /* ioasysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D6C23D1E9BC006FCB10 /* ioasysUITests.swift */; };
-		50F84D7C23D1EBFA006FCB10 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D7B23D1EBFA006FCB10 /* DataServices.swift */; };
-		50F84D7F23D1EC47006FCB10 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D7E23D1EC47006FCB10 /* Books.swift */; };
-		50F84D8123D1EC57006FCB10 /* BooksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D8023D1EC57006FCB10 /* BooksList.swift */; };
 		AD780BACDB34E461C86DA6BD /* Pods_ioasysTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C342FFD99DCB4FA54B61DA13 /* Pods_ioasysTests.framework */; };
 		C4BEF273FFA394D55DE4E0B1 /* Pods_ioasys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2C99203007C6854B35D /* Pods_ioasys.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,11 @@
 
 /* Begin PBXFileReference section */
 		2782A773C2C28B1AED70667F /* Pods_ioasys_ioasysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ioasys_ioasysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5001BB4F23D2265B009298BA /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
+		5001BB5323D22C69009298BA /* Coordination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordination.swift; sourceTree = "<group>"; };
+		5001BB5523D22C9F009298BA /* AppCoordination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordination.swift; sourceTree = "<group>"; };
+		5001BB5923D22D24009298BA /* UserDefaultDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultDataStorage.swift; sourceTree = "<group>"; };
+		5001BB5B23D22D64009298BA /* UserDefaultsDataStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataStorageImpl.swift; sourceTree = "<group>"; };
 		50F84D4423D1E9B5006FCB10 /* ioasys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ioasys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F84D4723D1E9B5006FCB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50F84D4923D1E9B5006FCB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +65,6 @@
 		50F84D6823D1E9BC006FCB10 /* ioasysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ioasysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F84D6C23D1E9BC006FCB10 /* ioasysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ioasysUITests.swift; sourceTree = "<group>"; };
 		50F84D6E23D1E9BC006FCB10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50F84D7B23D1EBFA006FCB10 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
-		50F84D7E23D1EC47006FCB10 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
-		50F84D8023D1EC57006FCB10 /* BooksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksList.swift; sourceTree = "<group>"; };
 		55C8BFDC697A07AD7D319B3A /* Pods-ioasysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioasysTests.debug.xcconfig"; path = "Target Support Files/Pods-ioasysTests/Pods-ioasysTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66FCFB420E969E7D17C87D7A /* Pods-ioasys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioasys.release.xcconfig"; path = "Target Support Files/Pods-ioasys/Pods-ioasys.release.xcconfig"; sourceTree = "<group>"; };
 		7979C2FDC230ED1317E2A55B /* Pods-ioasys-ioasysUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioasys-ioasysUITests.debug.xcconfig"; path = "Target Support Files/Pods-ioasys-ioasysUITests/Pods-ioasys-ioasysUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +126,51 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5001BB5123D22C0B009298BA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				50F84D4723D1E9B5006FCB10 /* AppDelegate.swift */,
+				50F84D5523D1E9BC006FCB10 /* LaunchScreen.storyboard */,
+				50F84D4923D1E9B5006FCB10 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		5001BB5223D22C28009298BA /* Coordination */ = {
+			isa = PBXGroup;
+			children = (
+				5001BB5323D22C69009298BA /* Coordination.swift */,
+				5001BB5523D22C9F009298BA /* AppCoordination.swift */,
+			);
+			name = Coordination;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5001BB5723D22CC2009298BA /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				50F84D5023D1E9B5006FCB10 /* ioasys.xcdatamodeld */,
+				5001BB5923D22D24009298BA /* UserDefaultDataStorage.swift */,
+				5001BB5B23D22D64009298BA /* UserDefaultsDataStorageImpl.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		5001BB5823D22CCE009298BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5001BB6123D22DE9009298BA /* RxExtensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5001BB6123D22DE9009298BA /* RxExtensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RxExtensions;
+			sourceTree = "<group>";
+		};
 		50F84D3B23D1E9B5006FCB10 = {
 			isa = PBXGroup;
 			children = (
@@ -147,16 +196,16 @@
 		50F84D4623D1E9B5006FCB10 /* ioasys */ = {
 			isa = PBXGroup;
 			children = (
-				50F84D4723D1E9B5006FCB10 /* AppDelegate.swift */,
-				50F84D4923D1E9B5006FCB10 /* SceneDelegate.swift */,
+				5001BB5223D22C28009298BA /* Coordination */,
+				5001BB5123D22C0B009298BA /* AppDelegate */,
+				5001BB5723D22CC2009298BA /* Storage */,
+				5001BB5823D22CCE009298BA /* Utils */,
 				50F84D7A23D1EBE3006FCB10 /* Services */,
 				50F84D4B23D1E9B5006FCB10 /* ViewController.swift */,
 				50F84D7D23D1EC31006FCB10 /* Models */,
 				50F84D4D23D1E9B5006FCB10 /* Main.storyboard */,
 				50F84D5323D1E9BC006FCB10 /* Assets.xcassets */,
-				50F84D5523D1E9BC006FCB10 /* LaunchScreen.storyboard */,
 				50F84D5823D1E9BC006FCB10 /* Info.plist */,
-				50F84D5023D1E9B5006FCB10 /* ioasys.xcdatamodeld */,
 			);
 			path = ioasys;
 			sourceTree = "<group>";
@@ -182,7 +231,7 @@
 		50F84D7A23D1EBE3006FCB10 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				50F84D7B23D1EBFA006FCB10 /* DataServices.swift */,
+				5001BB4F23D2265B009298BA /* DataServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -190,8 +239,6 @@
 		50F84D7D23D1EC31006FCB10 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				50F84D7E23D1EC47006FCB10 /* Books.swift */,
-				50F84D8023D1EC57006FCB10 /* BooksList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,9 +482,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50F84D8123D1EC57006FCB10 /* BooksList.swift in Sources */,
-				50F84D7F23D1EC47006FCB10 /* Books.swift in Sources */,
-				50F84D7C23D1EBFA006FCB10 /* DataServices.swift in Sources */,
+				5001BB5C23D22D64009298BA /* UserDefaultsDataStorageImpl.swift in Sources */,
+				5001BB5423D22C69009298BA /* Coordination.swift in Sources */,
+				5001BB5023D2265B009298BA /* DataServices.swift in Sources */,
+				5001BB5A23D22D24009298BA /* UserDefaultDataStorage.swift in Sources */,
+				5001BB5623D22C9F009298BA /* AppCoordination.swift in Sources */,
 				50F84D4C23D1E9B5006FCB10 /* ViewController.swift in Sources */,
 				50F84D4823D1E9B5006FCB10 /* AppDelegate.swift in Sources */,
 				50F84D4A23D1E9B5006FCB10 /* SceneDelegate.swift in Sources */,
