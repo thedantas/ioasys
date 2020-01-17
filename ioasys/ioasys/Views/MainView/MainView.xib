@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainView" customModule="ioasys" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="YO4-9x-Zzd">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_1" translatesAutoresizingMaskIntoConstraints="NO" id="BlZ-zr-C05">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZ7-gb-28X">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8P-fN-6Cv">
+                    <rect key="frame" x="0.0" y="160" width="414" height="736"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S2O-hO-ntF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <color key="backgroundColor" red="0.067020126210000003" green="0.13406323580000001" blue="0.2148239213" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jm7-gw-aVR">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeN-gz-g6S" customClass="HeaderView" customModule="ChuckNorris" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" placeholder="YES" id="OUe-Np-cxK"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3q-bV-abs">
+                    <rect key="frame" x="0.0" y="160" width="414" height="702"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="BlZ-zr-C05" secondAttribute="bottom" id="0PD-Uq-JzD"/>
+                <constraint firstItem="fZ7-gb-28X" firstAttribute="leading" secondItem="Aut-P3-WbK" secondAttribute="leading" id="210-pd-y3m"/>
+                <constraint firstItem="p8P-fN-6Cv" firstAttribute="trailing" secondItem="Aut-P3-WbK" secondAttribute="trailing" id="9En-ww-4Zs"/>
+                <constraint firstItem="eeN-gz-g6S" firstAttribute="top" secondItem="YO4-9x-Zzd" secondAttribute="top" id="9gr-3F-BSm"/>
+                <constraint firstItem="p8P-fN-6Cv" firstAttribute="leading" secondItem="Aut-P3-WbK" secondAttribute="leading" id="E1B-HX-6zS"/>
+                <constraint firstItem="f3q-bV-abs" firstAttribute="trailing" secondItem="Aut-P3-WbK" secondAttribute="trailing" id="GTa-MO-kVD"/>
+                <constraint firstItem="eeN-gz-g6S" firstAttribute="trailing" secondItem="Aut-P3-WbK" secondAttribute="trailing" id="Hzc-6q-2OK"/>
+                <constraint firstItem="fZ7-gb-28X" firstAttribute="bottom" secondItem="YO4-9x-Zzd" secondAttribute="bottom" id="IzA-yg-c29"/>
+                <constraint firstItem="Jm7-gw-aVR" firstAttribute="trailing" secondItem="Aut-P3-WbK" secondAttribute="trailing" id="JNV-lV-1VQ"/>
+                <constraint firstItem="fZ7-gb-28X" firstAttribute="top" secondItem="YO4-9x-Zzd" secondAttribute="top" id="KP9-G0-nKS"/>
+                <constraint firstItem="f3q-bV-abs" firstAttribute="top" secondItem="eeN-gz-g6S" secondAttribute="bottom" id="LqL-aO-2Jj"/>
+                <constraint firstItem="eeN-gz-g6S" firstAttribute="leading" secondItem="Aut-P3-WbK" secondAttribute="leading" id="Nop-FK-amW"/>
+                <constraint firstItem="f3q-bV-abs" firstAttribute="bottom" secondItem="Aut-P3-WbK" secondAttribute="bottom" id="ScZ-wZ-IF4"/>
+                <constraint firstItem="f3q-bV-abs" firstAttribute="leading" secondItem="Aut-P3-WbK" secondAttribute="leading" id="avJ-vW-j1G"/>
+                <constraint firstItem="Jm7-gw-aVR" firstAttribute="bottom" secondItem="YO4-9x-Zzd" secondAttribute="bottom" id="g6N-xO-eQK"/>
+                <constraint firstItem="BlZ-zr-C05" firstAttribute="top" secondItem="YO4-9x-Zzd" secondAttribute="top" id="j0n-Tx-ouQ"/>
+                <constraint firstItem="fZ7-gb-28X" firstAttribute="trailing" secondItem="Aut-P3-WbK" secondAttribute="trailing" id="jqh-vz-lk2"/>
+                <constraint firstItem="BlZ-zr-C05" firstAttribute="trailing" secondItem="Aut-P3-WbK" secondAttribute="trailing" id="lgG-pB-PTf"/>
+                <constraint firstItem="p8P-fN-6Cv" firstAttribute="top" secondItem="eeN-gz-g6S" secondAttribute="bottom" id="qoK-Q1-Gue"/>
+                <constraint firstItem="p8P-fN-6Cv" firstAttribute="bottom" secondItem="YO4-9x-Zzd" secondAttribute="bottom" id="shM-NT-4Nu"/>
+                <constraint firstItem="BlZ-zr-C05" firstAttribute="leading" secondItem="Aut-P3-WbK" secondAttribute="leading" id="uRq-dt-BF2"/>
+                <constraint firstItem="Jm7-gw-aVR" firstAttribute="top" secondItem="YO4-9x-Zzd" secondAttribute="top" id="yJe-iU-aRs"/>
+                <constraint firstItem="Jm7-gw-aVR" firstAttribute="leading" secondItem="Aut-P3-WbK" secondAttribute="leading" id="zb4-Of-ecz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Aut-P3-WbK"/>
+            <point key="canvasLocation" x="34.5" y="56.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="image_1" width="16" height="16"/>
+    </resources>
+</document>
