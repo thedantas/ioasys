@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2D54BE5075BA14082F00378D /* Pods_ioasys_ioasysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2782A773C2C28B1AED70667F /* Pods_ioasys_ioasysUITests.framework */; };
-		5001BB5023D2265B009298BA /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB4F23D2265B009298BA /* DataServices.swift */; };
 		5001BB5423D22C69009298BA /* Coordination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB5323D22C69009298BA /* Coordination.swift */; };
 		5001BB5623D22C9F009298BA /* AppCoordination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB5523D22C9F009298BA /* AppCoordination.swift */; };
 		5001BB5A23D22D24009298BA /* UserDefaultDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB5923D22D24009298BA /* UserDefaultDataStorage.swift */; };
@@ -30,6 +29,8 @@
 		5001BB8523D2379D009298BA /* UIView+Contraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB8423D2379D009298BA /* UIView+Contraints.swift */; };
 		5001BB8723D237CB009298BA /* UIView+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB8623D237CB009298BA /* UIView+Rotate.swift */; };
 		5001BB8923D237D9009298BA /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB8823D237D9009298BA /* String+Utils.swift */; };
+		5001BB8B23D24CF2009298BA /* EnterpriseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB8A23D24CF2009298BA /* EnterpriseService.swift */; };
+		5001BB8D23D24D2D009298BA /* EnterpriseRouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BB8C23D24D2D009298BA /* EnterpriseRouterProvider.swift */; };
 		50F84D4823D1E9B5006FCB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D4723D1E9B5006FCB10 /* AppDelegate.swift */; };
 		50F84D4A23D1E9B5006FCB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D4923D1E9B5006FCB10 /* SceneDelegate.swift */; };
 		50F84D4C23D1E9B5006FCB10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D4B23D1E9B5006FCB10 /* ViewController.swift */; };
@@ -62,7 +63,6 @@
 
 /* Begin PBXFileReference section */
 		2782A773C2C28B1AED70667F /* Pods_ioasys_ioasysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ioasys_ioasysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5001BB4F23D2265B009298BA /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		5001BB5323D22C69009298BA /* Coordination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordination.swift; sourceTree = "<group>"; };
 		5001BB5523D22C9F009298BA /* AppCoordination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordination.swift; sourceTree = "<group>"; };
 		5001BB5923D22D24009298BA /* UserDefaultDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultDataStorage.swift; sourceTree = "<group>"; };
@@ -84,6 +84,8 @@
 		5001BB8423D2379D009298BA /* UIView+Contraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Contraints.swift"; sourceTree = "<group>"; };
 		5001BB8623D237CB009298BA /* UIView+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rotate.swift"; sourceTree = "<group>"; };
 		5001BB8823D237D9009298BA /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		5001BB8A23D24CF2009298BA /* EnterpriseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseService.swift; sourceTree = "<group>"; };
+		5001BB8C23D24D2D009298BA /* EnterpriseRouterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseRouterProvider.swift; sourceTree = "<group>"; };
 		50F84D4423D1E9B5006FCB10 /* ioasys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ioasys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F84D4723D1E9B5006FCB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50F84D4923D1E9B5006FCB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +219,14 @@
 			path = RxExtensions;
 			sourceTree = "<group>";
 		};
+		5001BB8E23D24E0E009298BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50F84D5323D1E9BC006FCB10 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		50F84D3B23D1E9B5006FCB10 = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +260,7 @@
 				50F84D4B23D1E9B5006FCB10 /* ViewController.swift */,
 				50F84D7D23D1EC31006FCB10 /* Models */,
 				50F84D4D23D1E9B5006FCB10 /* Main.storyboard */,
-				50F84D5323D1E9BC006FCB10 /* Assets.xcassets */,
+				5001BB8E23D24E0E009298BA /* Resources */,
 				50F84D5823D1E9BC006FCB10 /* Info.plist */,
 			);
 			path = ioasys;
@@ -277,8 +287,9 @@
 		50F84D7A23D1EBE3006FCB10 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5001BB4F23D2265B009298BA /* DataServices.swift */,
 				5001BB6223D22F56009298BA /* EnterpriseRouter.swift */,
+				5001BB8A23D24CF2009298BA /* EnterpriseService.swift */,
+				5001BB8C23D24D2D009298BA /* EnterpriseRouterProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -537,7 +548,6 @@
 				5001BB5C23D22D64009298BA /* UserDefaultsDataStorageImpl.swift in Sources */,
 				5001BB5423D22C69009298BA /* Coordination.swift in Sources */,
 				5001BB8723D237CB009298BA /* UIView+Rotate.swift in Sources */,
-				5001BB5023D2265B009298BA /* DataServices.swift in Sources */,
 				5001BB5A23D22D24009298BA /* UserDefaultDataStorage.swift in Sources */,
 				5001BB7923D233D2009298BA /* StateView+Rx.swift in Sources */,
 				5001BB5623D22C9F009298BA /* AppCoordination.swift in Sources */,
@@ -552,9 +562,11 @@
 				5001BB8923D237D9009298BA /* String+Utils.swift in Sources */,
 				50F84D4A23D1E9B5006FCB10 /* SceneDelegate.swift in Sources */,
 				50F84D5223D1E9B5006FCB10 /* ioasys.xcdatamodeld in Sources */,
+				5001BB8B23D24CF2009298BA /* EnterpriseService.swift in Sources */,
 				5001BB6523D23163009298BA /* Enterprise.swift in Sources */,
 				5001BB6323D22F56009298BA /* EnterpriseRouter.swift in Sources */,
 				5001BB8523D2379D009298BA /* UIView+Contraints.swift in Sources */,
+				5001BB8D23D24D2D009298BA /* EnterpriseRouterProvider.swift in Sources */,
 				5001BB6723D231C2009298BA /* EnterpriseResponse.swift in Sources */,
 				5001BB6F23D2323C009298BA /* AuthUserResponse.swift in Sources */,
 				5001BB8323D23430009298BA /* Keyboard+Utils.swift in Sources */,

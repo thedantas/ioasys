@@ -10,7 +10,6 @@ import Moya
 
 //MARK: Enum
 enum EnterpriseRouter {
-    case categories
     case search(String)
 }
 
@@ -32,9 +31,7 @@ extension EnterpriseRouter: TargetType {
     var method: Method {
         return .get
     }
-    var header: HeaderView{
-        return .init()
-    }
+
     var sampleData: Data {
         switch self {
         case .search:
@@ -50,8 +47,6 @@ extension EnterpriseRouter: TargetType {
     
     var parameters: [String: Any]? {
         switch self {
-        case .categories:
-            return nil
         case .search(let query):
             return ["query": query]
         }
