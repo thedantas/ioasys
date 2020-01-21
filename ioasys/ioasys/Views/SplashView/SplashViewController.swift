@@ -28,12 +28,15 @@ class SplashViewController: UIViewController {
     @IBOutlet var views: [UIView]!
     @IBOutlet weak var continueButton: UIButton!
     
+
     //MARK:Variables
     weak var delegate: SplashDelegate?
     var animators: [UIViewPropertyAnimator] = []
+    let localStorage: UserDefaultsDataStorage
     
     //MARK: Cycle Life
-    init() {
+    init(localStorage: UserDefaultsDataStorage) {
+        self.localStorage = localStorage
         super.init(nibName: String(describing: SplashViewController.self), bundle: nil)
     }
     
@@ -43,6 +46,7 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AuthUserRouterProvider.login("","")
     }
     
     override func viewWillAppear(_ animated: Bool) {

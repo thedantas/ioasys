@@ -13,7 +13,7 @@ struct BaseURLConstants {
     
     private init() {}
     
-    static let baseURL = "https://empresas.ioasys.com.br/api"
+    static let baseURL = "https://empresas.ioasys.com.br/api/v1"
     
 }
 

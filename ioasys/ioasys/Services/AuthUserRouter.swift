@@ -10,8 +10,9 @@ import Moya
 
 //MARK: Enum
 enum AuthUserRouter {
-    case search(String)
+    case search(String,String)
 }
+
 
 //MARK: Extension
 extension AuthUserRouter: TargetType {
@@ -24,7 +25,7 @@ extension AuthUserRouter: TargetType {
     var path: String {
         switch self {
         case .search:
-            return "/users/auth/"
+            return "users/auth/"
         }
     }
     
@@ -64,6 +65,5 @@ extension AuthUserRouter: TargetType {
         return nil
     }
 }
-
 
 

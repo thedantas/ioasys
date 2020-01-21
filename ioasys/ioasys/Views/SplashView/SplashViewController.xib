@@ -7,7 +7,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="ioasys" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="ioasys" customModuleProvider="target">
+            <connections>
+                <outlet property="chuckNorrisImage" destination="egN-Dx-hYT" id="NSA-sb-xcL"/>
+                <outlet property="continueButton" destination="AZx-OA-XXu" id="9n9-8m-u4K"/>
+                <outlet property="largeView" destination="lZq-gj-icr" id="3sL-bE-T9G"/>
+                <outlet property="largeViewBottomConstraint" destination="SJK-gD-3vI" id="Ugr-Rx-uPy"/>
+                <outlet property="largeViewLeadingConstraint" destination="BiR-20-UfB" id="iIB-Yx-iUZ"/>
+                <outlet property="logoImageView" destination="egN-Dx-hYT" id="E6L-VO-MUE"/>
+                <outlet property="view" destination="HY4-AT-aQC" id="etw-Nk-kCI"/>
+                <outletCollection property="leadingConstraints" destination="lep-iG-OGw" collectionClass="NSMutableArray" id="n1B-eJ-drJ"/>
+                <outletCollection property="views" destination="f9g-Il-zcM" collectionClass="NSMutableArray" id="zgH-vl-Q6T"/>
+                <outletCollection property="bottomConstraints" destination="L62-r0-LLh" collectionClass="NSMutableArray" id="NKX-n7-W3p"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="HY4-AT-aQC">
             <rect key="frame" x="0.0" y="0.0" width="425" height="667"/>
@@ -109,6 +122,6 @@
     </objects>
     <resources>
         <image name="chuck_norris" width="16" height="16"/>
-        <image name="image_1" width="16" height="16"/>
+        <image name="image_1" width="1000" height="1500"/>
     </resources>
 </document>

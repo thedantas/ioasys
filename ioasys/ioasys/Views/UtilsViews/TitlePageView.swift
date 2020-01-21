@@ -44,7 +44,7 @@ class HeaderView: UIView {
     
     let searchButton: UIButton = {
         let button = UIButton()
-        button.setImage(#imageLiteral(resourceName: "search"), for: .normal)
+      //  button.setImage(#imageLiteral(resourceName: "search"), for: .normal)
         button.accessibilityIdentifier = "search_button"
         return button
     }()

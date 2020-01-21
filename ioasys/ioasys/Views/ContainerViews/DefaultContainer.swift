@@ -29,18 +29,18 @@ extension DefaultContainer {
     func registerViews() {
         
         self.container.register(SearchView.self) { resolver in
-            SearchView(norrisStorage: resolver.resolve(UserDefaultsDataStorage.self),
+            SearchView(enterpriseStorage: resolver.resolve(EnterpriseStorage.self)!,
                        localStorage: resolver.resolve(UserDefaultsDataStorage.self)!)
         }
         
         self.container.register(MainView.self) { resolver in
-            MainView(searchView: resolver.resolve(SearchView.self),
-                repository: resolver.resolve(UserDefaultsDataStorage.self)!,
+            MainView(searchView: resolver.resolve(SearchView.self)!,
+                repository: resolver.resolve(EnterpriseStorage.self)!,
                 localStorage: resolver.resolve(UserDefaultsDataStorage.self)!)
         }
         
-        self.container.register(SplashViewController.self) { _ in
-            SplashViewController()
+        self.container.register(SplashViewController.self) {  resolver in
+            SplashViewController(localStorage: resolver.resolve(UserDefaultsDataStorage.self)!)
         }
         
     }
@@ -51,13 +51,13 @@ extension DefaultContainer {
     
     func registerServices() {
         self.container.register(EnterpriseService.self) { _ in
-            let provider = MoyaProvider<FactsRouter>(plugins: self.getDefaultPlugins())
+            let provider = MoyaProvider<EnterpriseRouter>(plugins: self.getDefaultPlugins())
             return NorrisServiceRouterProvider(provider: provider)
         }
         
-        self.container.register(NorrisStorage.self) { resolver in
-            NorrisStorageImpl(
-                service: resolver.resolve(NorrisService.self)!
+        self.container.register(EnterpriseStorage.self) { resolver in
+            EnterpriseStorageImpl(
+                service: resolver.resolve(EnterpriseService.self)!
             )
         }
     }
@@ -83,5 +83,4 @@ extension DefaultContainer {
     }
     
 }
-
 

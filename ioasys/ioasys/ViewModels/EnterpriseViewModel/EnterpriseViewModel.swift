@@ -18,7 +18,7 @@ class EnterpriseItemViewModel {
     let description: Driver<String>
     let backgroundImage: Driver<UIImage?>
     let fontSize: Driver<CGFloat>
-    let categories: Driver<[String]>
+
     
     init() {
         self.enterprise = PublishSubject<Enterprise>()
@@ -27,7 +27,7 @@ class EnterpriseItemViewModel {
             .map { $0.enterprise_name }
             .asDriver(onErrorJustReturn: "")
         
-    //    self.backgroundImage = Driver.just(Random.image)
+      self.backgroundImage = Driver.just(Random.image)
         
         self.fontSize = self.text
             .map {
@@ -37,13 +37,13 @@ class EnterpriseItemViewModel {
         
         self.description = self.enterprise
             .map { $0.description }
-            .map { $0.map { "#\($0)" } }
             .asDriver(onErrorJustReturn: "")
 
     }
     
-    func bind(_ fact: Fact) {
-        self.fact.onNext(fact)
+    func bind(_ enterprise: Enterprise) {
+        self.enterprise.onNext(enterprise)
+        
     }
     
 }

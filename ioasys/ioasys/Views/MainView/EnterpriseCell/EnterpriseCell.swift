@@ -58,10 +58,10 @@ class NorrisFactCell: UITableViewCell, NibReusable {
             self?.delegate?.share(image: image)
         }.disposed(by: rx.disposeBag)
         
-        self.viewModel.categories
-            .drive(categoriesCloudView.rx.enterprises)
-            .disposed(by: rx.disposeBag)
-        
+//        self.viewModel.categories
+//            .drive(categoriesCloudView.rx.enterprises)
+//            .disposed(by: rx.disposeBag)
+//
     }
 }
 extension UIView {

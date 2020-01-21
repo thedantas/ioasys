@@ -14,7 +14,7 @@ class NotFindView: UIView, StateSubview {
     
     //MARK: Variable
     private var didSetupViews: Bool = false
-    var lottieView: LOTAnimationView?
+    var lottieView: AnimationView?
     let label: UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -52,7 +52,7 @@ class NotFindView: UIView, StateSubview {
     }
     
     private func setupConstraints() {
-        self.lottieView = LOTAnimationView(name: "not_found")
+        self.lottieView = AnimationView(name: "not_found")
         self.addSubview(lottieView!)
         self.addSubview(label)
         
@@ -62,7 +62,7 @@ class NotFindView: UIView, StateSubview {
         lottieView?.prepareForConstraints()
         lottieView?.centerHorizontally()
         lottieView?.centerVertically()
-        lottieView?.loopAnimation = true
+        lottieView?.loopMode = .loop
         
         label.prepareForConstraints()
         label.centerHorizontally()

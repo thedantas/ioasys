@@ -16,9 +16,6 @@ class SearchViewModel {
     let recentSearch: Driver<[String]>
     let isRecentSearchHidden: Driver<Bool>
     
-    let categories: Driver<[String]>
-    let categoriesError: Driver<Error>
-    
     let isLoading: Driver<Bool>
     
     let disposeBag = DisposeBag()
@@ -28,7 +25,7 @@ class SearchViewModel {
         
         let loadingIndicator = ActivityIndicator()
         self.isLoading = loadingIndicator.asDriver()
-        
+            
         self.recentSearch = localStorage
             .lastSearch
             .asDriver(onErrorJustReturn: [])
@@ -36,6 +33,7 @@ class SearchViewModel {
         self.isRecentSearchHidden = self.recentSearch
             .map { $0.count == 0 }
             .startWith(true)
-    
+        
+
     }
 }

@@ -11,5 +11,5 @@ import Moya
 
 //MARK: Protocol
 protocol AuthUserService {
-    func search(_ login: String, _ password: String) -> Single<Response>
+    func login(_ login: String, _ password: String) -> Single<Response>
 }

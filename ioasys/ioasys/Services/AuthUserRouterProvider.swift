@@ -12,16 +12,20 @@ import Moya
 
 class AuthUserRouterProvider: AuthUserService {
     
-    func search(_ login: String, _ password: String) -> Single<Response> {
-        return self.provider.rx.request(.search(login))
+    func login(_ login: String, _ password: String) -> Single<Response> {
+        return self.provider.rx.request(.search(login, password))
     }
     
     
     //MARK: Variables
-    let provider: MoyaProvider<EnterpriseRouter>
+    //let provider: MoyaProvider<AuthUserRouter>
+    var provider = MoyaProvider<AuthUserRouter>(plugins: [CredentialsPlugin { _ -> URLCredential? in
+            return URLCredential(user: "email", password: "password", persistence: .none)
+        }
+    ])
     
     //MARK: Init
-    init(provider: MoyaProvider<EnterpriseRouter>) {
+    init(provider: MoyaProvider<AuthUserRouter>) {
         self.provider = provider
     }
     

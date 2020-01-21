@@ -15,7 +15,7 @@ class StartView: UIView, StateSubview {
     
     private var didSetupViews: Bool = false
     
-    var lottieView: LOTAnimationView?
+    var lottieView: AnimationView?
     
     let label: UILabel = {
         let label = UILabel()
@@ -54,7 +54,7 @@ class StartView: UIView, StateSubview {
     }
     
     private func setupConstraints() {
-        self.lottieView = LOTAnimationView(name: "warning")
+        self.lottieView = AnimationView(name: "warning")
         self.addSubview(lottieView!)
         self.addSubview(label)
         
@@ -64,7 +64,7 @@ class StartView: UIView, StateSubview {
         lottieView?.prepareForConstraints()
         lottieView?.centerHorizontally()
         lottieView?.centerVertically()
-        lottieView?.loopAnimation = true
+        lottieView?.loopMode = .loop
         
         self.label.prepareForConstraints()
         self.label.pinLeft(32)

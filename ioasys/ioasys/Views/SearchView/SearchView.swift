@@ -29,7 +29,7 @@ class SearchView: UIViewController {
     //MARK: Life Cycle
     init(enterpriseStorage: EnterpriseStorage,
          localStorage: UserDefaultsDataStorage) {
-        self.enterpriseStorage = norrisStorage
+        self.enterpriseStorage = enterpriseStorage
         self.localStorage = localStorage
         super.init(nibName: String(describing: SearchView.self), bundle: nil)
     }
@@ -58,10 +58,10 @@ extension SearchView {
     }
     
     func setupBindings() {
-        self.viewModel.categories
-            .drive(self.categoriesCloudView.rx.enterprises)
-            .disposed(by: rx.disposeBag)
-        
+//        self.viewModel.categories
+//            .drive(self.categoriesCloudView.rx.enterprises)
+//            .disposed(by: rx.disposeBag)
+//
         self.categorySelected = self.categoriesCloudView.rx.tagSelected
         
         self.recentSearchSelected = self.pastSearchCloudView.rx.tagSelected
