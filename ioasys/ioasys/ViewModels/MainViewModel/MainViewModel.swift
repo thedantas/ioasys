@@ -14,7 +14,7 @@ import RxSwiftExt
 
 class MainViewModel {
     
-    let results: Driver<[Fact]>
+    let results: Driver<[Enterprise]>
     let searchError: Driver<Error>
     let isSearchShown: PublishSubject<Bool>
     
@@ -31,7 +31,7 @@ class MainViewModel {
             (search: Driver<String>,
             categorySelected: Driver<String>,
             recentSearchSelected: Driver<String>),
-         norrisStorage: NorrisStorage,
+         norrisStorage: EnterpriseStorage,
          localStorage: UserDefaultsDataStorage) {
         
         let loadingIndicator = ActivityIndicator()
@@ -70,7 +70,7 @@ class MainViewModel {
         
         self.searchError = searchResult
             .errors()
-            .asDriver(onErrorJustReturn: NorrisError())
+            .asDriver(onErrorJustReturn: EnterpriseError())
         
         self.viewState = MainViewModel.viewState(results: results, error: searchError, isLoading: isLoading)
         
@@ -109,7 +109,7 @@ class MainViewModel {
     ///   - error: Error thrown on api call
     ///   - isLoading: Wheater is loading or not
     /// - Returns: Observable already mapped to view state
-    class func viewState(results: Driver<[Fact]>, error: Driver<Error>, isLoading: Driver<Bool>) -> Driver<ViewSelect> {
+    class func viewState(results: Driver<[Enterprise]>, error: Driver<Error>, isLoading: Driver<Bool>) -> Driver<ViewSelect> {
         //view states
         let isEmpty = results
             .filter { $0.isEmpty }
@@ -129,7 +129,7 @@ class MainViewModel {
                                  error,
                                  loading)
             .startWith(.start)
-            .asDriver(onErrorJustReturn: ViewSelect.error(NorrisError()))
+            .asDriver(onErrorJustReturn: ViewSelect.error(EnterpriseError()))
 
     }
 }

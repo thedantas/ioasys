@@ -21,15 +21,15 @@ class SearchView: UIViewController {
     
     //MARK: Variables
     var viewModel: SearchViewModel!
-    let norrisStorage: NorrisStorage
+    let enterpriseStorage: EnterpriseStorage
     let localStorage: UserDefaultsDataStorage
     var categorySelected: Driver<String>!
     var recentSearchSelected: Driver<String>!
     
     //MARK: Life Cycle
-    init(norrisStorage: NorrisStorage,
+    init(enterpriseStorage: EnterpriseStorage,
          localStorage: UserDefaultsDataStorage) {
-        self.norrisStorage = norrisStorage
+        self.enterpriseStorage = norrisStorage
         self.localStorage = localStorage
         super.init(nibName: String(describing: SearchView.self), bundle: nil)
     }
@@ -53,13 +53,13 @@ extension SearchView {
     
     func setupViewModel() {
         self.viewModel = SearchViewModel(
-            norrisStorage: self.norrisStorage,
+            enterpriseStorage: self.enterpriseStorage,
             localStorage: self.localStorage)
     }
     
     func setupBindings() {
         self.viewModel.categories
-            .drive(self.categoriesCloudView.rx.facts)
+            .drive(self.categoriesCloudView.rx.enterprises)
             .disposed(by: rx.disposeBag)
         
         self.categorySelected = self.categoriesCloudView.rx.tagSelected
@@ -67,7 +67,7 @@ extension SearchView {
         self.recentSearchSelected = self.pastSearchCloudView.rx.tagSelected
         
         self.viewModel.recentSearch
-            .drive(self.pastSearchCloudView.rx.facts)
+            .drive(self.pastSearchCloudView.rx.enterprises)
             .disposed(by: rx.disposeBag)
         
         self.viewModel.isLoading

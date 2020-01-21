@@ -29,13 +29,13 @@ extension DefaultContainer {
     func registerViews() {
         
         self.container.register(SearchView.self) { resolver in
-            SearchView(norrisStorage: resolver.resolve(NorrisStorage.self)!,
+            SearchView(norrisStorage: resolver.resolve(UserDefaultsDataStorage.self),
                        localStorage: resolver.resolve(UserDefaultsDataStorage.self)!)
         }
         
         self.container.register(MainView.self) { resolver in
-            MainView(searchView: resolver.resolve(SearchView.self)!,
-                repository: resolver.resolve(NorrisStorage.self)!,
+            MainView(searchView: resolver.resolve(SearchView.self),
+                repository: resolver.resolve(UserDefaultsDataStorage.self)!,
                 localStorage: resolver.resolve(UserDefaultsDataStorage.self)!)
         }
         
@@ -50,7 +50,7 @@ extension DefaultContainer {
 extension DefaultContainer {
     
     func registerServices() {
-        self.container.register(NorrisService.self) { _ in
+        self.container.register(EnterpriseService.self) { _ in
             let provider = MoyaProvider<FactsRouter>(plugins: self.getDefaultPlugins())
             return NorrisServiceRouterProvider(provider: provider)
         }

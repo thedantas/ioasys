@@ -13,7 +13,7 @@ import RxCocoa
 class MainView: UIViewController {
     
     var viewModel: MainViewModel!
-    let norrisStorage: NorrisStorage
+    let enterpriseStorage: EnterpriseStorage
     let localStorage: UserDefaultsDataStorage
 
     @IBOutlet weak var tableView: UITableView!
@@ -26,8 +26,8 @@ class MainView: UIViewController {
         return .lightContent
     }
     
-    init(searchView: SearchView, repository: NorrisStorage, localStorage: UserDefaultsDataStorage) {
-        self.norrisStorage = repository
+    init(searchView: SearchView, repository: EnterpriseStorage, localStorage: UserDefaultsDataStorage) {
+        self.enterpriseStorage = repository
         self.searchView = searchView
         self.localStorage = localStorage
         super.init(nibName: String(describing: MainView.self), bundle: nil)
@@ -58,7 +58,7 @@ extension MainView {
             input: (search: self.headerView.search,
                   categorySelected: self.searchView.categorySelected,
                   recentSearchSelected: self.searchView.recentSearchSelected),
-            norrisStorage: self.norrisStorage,
+            enterpriseStorage: self.enterpriseStorage,
                            localStorage: localStorage)
     }
     

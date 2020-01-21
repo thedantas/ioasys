@@ -23,18 +23,11 @@ class SearchViewModel {
     
     let disposeBag = DisposeBag()
     
-    init(norrisStorage: NorrisStorage,
+    init(enterpriseStorage: EnterpriseStorage,
          localStorage: UserDefaultsDataStorage) {
         
         let loadingIndicator = ActivityIndicator()
         self.isLoading = loadingIndicator.asDriver()
-        
-        let categoriesResult = norrisStorage
-            .categories()
-            .trackActivity(loadingIndicator)
-            .retryWhenNeeded()
-            .materialize()
-            .share()
         
         self.recentSearch = localStorage
             .lastSearch
@@ -43,15 +36,6 @@ class SearchViewModel {
         self.isRecentSearchHidden = self.recentSearch
             .map { $0.count == 0 }
             .startWith(true)
-        
-        self.categories = categoriesResult
-            .elements()
-            .startWith([])
-            .asDriver(onErrorJustReturn: [])
-        
-        self.categoriesError = categoriesResult
-            .errors()
-            .asDriver(onErrorJustReturn: NorrisError())
     
     }
 }

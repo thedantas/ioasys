@@ -24,7 +24,7 @@ class NorrisFactCell: UITableViewCell, NibReusable {
     
     //MARK: Variables
     weak var delegate: NorrisFactCellDelegate?
-    var viewModel = FactItemViewModel()
+    var viewModel = EnterpriseItemViewModel()
     
     //MARK: Functions
     override func awakeFromNib() {
@@ -36,7 +36,7 @@ class NorrisFactCell: UITableViewCell, NibReusable {
                                            textColor: UIColor.white)
     }
     
-    func bind(_ fact: Fact) {
+    func bind(_ fact: Enterprise) {
         self.viewModel.bind(fact)
     }
     
@@ -59,7 +59,7 @@ class NorrisFactCell: UITableViewCell, NibReusable {
         }.disposed(by: rx.disposeBag)
         
         self.viewModel.categories
-            .drive(categoriesCloudView.rx.facts)
+            .drive(categoriesCloudView.rx.enterprises)
             .disposed(by: rx.disposeBag)
         
     }
