@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C199D972-D8C5-415F-8729-4B734066D8E2"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30F90496-6189-4DA0-ACE1-5CB58FA2EDE9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ioasys/Models/Enterprise.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "init(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFE864C6-8656-437D-9F44-F88AD9979278"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ioasys/Models/Enterprise.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "init(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F046846-0E9F-40AE-89F8-4E92C3BB2A19"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ioasys/Models/Enterprise.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  uuid = "0F046846-0E9F-40AE-89F8-4E92C3BB2A19 - 64e111aea87f2272"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ioasys.Enterprise.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;ioasys.Enterprise.CodingKeys&gt;"
+                  moduleName = "ioasys"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andredantas/Documents/GitHub/ioasys/ioasys/ioasys/Models/Enterprise.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "0F046846-0E9F-40AE-89F8-4E92C3BB2A19 - daf622614aa11dee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ioasys.Enterprise.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "ioasys"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andredantas/Documents/GitHub/ioasys/ioasys/ioasys/Models/Enterprise.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87A12573-0C6C-4C07-BB55-D312B13797C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ioasys/Models/Enterprise.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  uuid = "87A12573-0C6C-4C07-BB55-D312B13797C2 - 64e111aea87f2272"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ioasys.Enterprise.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;ioasys.Enterprise.CodingKeys&gt;"
+                  moduleName = "ioasys"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andredantas/Documents/GitHub/ioasys/ioasys/ioasys/Models/Enterprise.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "87A12573-0C6C-4C07-BB55-D312B13797C2 - daf622614aa11dee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ioasys.Enterprise.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "ioasys"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andredantas/Documents/GitHub/ioasys/ioasys/ioasys/Models/Enterprise.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E098D1BF-D266-4377-8F6B-4D48D7BC0E2F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ioasys/Storage/EnterpriseStorage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "errorDescription"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

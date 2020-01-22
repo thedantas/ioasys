@@ -48,7 +48,7 @@ class UserDefaultsDataStorageImpl: UserDefaultsDataStorage {
         let newArray = self.addNewSearch(string.lowercased(), current: current)
         userDefaults.set(newArray, forKey: LocalStorageKeys.pastSearch)
     }
-    
+
     func addNewSearch(_ string: String, current: [String]) -> [String] {
         var newArray = current
         

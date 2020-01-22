@@ -7,7 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchView" customModule="ioasys" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchView" customModule="ioasys" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="t0H-wl-JfL" id="ZBi-bP-PwF"/>
+                <outlet property="categoriesCloudView" destination="6uq-NU-gec" id="bI2-pk-Qc7"/>
+                <outlet property="pastSearchCloudView" destination="097-JG-P7s" id="AMf-78-2FV"/>
+                <outlet property="view" destination="ELm-Sb-wPa" id="zzH-s4-PNH"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ELm-Sb-wPa">
             <rect key="frame" x="0.0" y="0.0" width="388" height="474"/>
@@ -19,7 +26,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uq-NU-gec" customClass="CategoriesTagView" customModule="ChuckNorris" customModuleProvider="target">
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uq-NU-gec" customClass="CategoriesTagView" customModule="ioasys" customModuleProvider="target">
                     <rect key="frame" x="20" y="55" width="348" height="180"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -35,7 +42,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="097-JG-P7s" customClass="CategoriesTagView" customModule="ChuckNorris" customModuleProvider="target">
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="097-JG-P7s" customClass="CategoriesTagView" customModule="ioasys" customModuleProvider="target">
                     <rect key="frame" x="20" y="284" width="348" height="170"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>

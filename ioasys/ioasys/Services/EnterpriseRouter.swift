@@ -4,7 +4,7 @@
 //
 //  Created by Andre Costa Dantas on 17/01/20.
 //  Copyright © 2020 Andre Costa Dantas. All rights reserved.
-//
+//  https://empresas.ioasys.com.br/api/v1/enterprises?&name=Ar
 
 import Moya
 
@@ -24,7 +24,7 @@ extension EnterpriseRouter: TargetType {
     var path: String {
         switch self {
         case .search:
-            return "/enterprises?&name"
+            return "/enterprises"
         }
     }
     
@@ -48,7 +48,7 @@ extension EnterpriseRouter: TargetType {
     var parameters: [String: Any]? {
         switch self {
         case .search(let query):
-            return ["query": query]
+            return ["&name": query]
         }
     }
     
@@ -61,7 +61,9 @@ extension EnterpriseRouter: TargetType {
     }
     
     var headers: [String: String]? {
-        return nil
+
+         let authenticationHeaders = ["access-token": "bgUkCJbP-K4zlyICQ6Mi7Q", "client": "OF4_wOKMesMpPt6SoTc4ew", "uid": "testeapple@ioasys.com.br"]
+        return authenticationHeaders
     }
 }
 

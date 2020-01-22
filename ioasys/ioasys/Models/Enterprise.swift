@@ -4,21 +4,21 @@
 //
 //  Created by Andre Costa Dantas on 17/01/20.
 //  Copyright © 2020 Andre Costa Dantas. All rights reserved.
-//
+// 
 
 import Foundation
 
 struct Enterprise: Decodable {
     //MARK: Variables
-    let photo: String
+    let id: String
     let enterprise_name: String
     let description: String
 
     //MARK: Enum
     enum CodingKeys: String, CodingKey {
-        case photo
+        case id = "id"
         case enterprise_name = "enterprise_name"
-        case description
+        case description = "description"
     
     }
     
@@ -27,7 +27,7 @@ struct Enterprise: Decodable {
          photo: String = "",
          enterprise_name: String = "",
          description: String = "") {
-        self.photo = photo
+        self.id = photo
         self.enterprise_name = enterprise_name
         self.description = description
     }
@@ -37,7 +37,7 @@ struct Enterprise: Decodable {
         
         self.enterprise_name = try container.decode(String.self, forKey: .enterprise_name)
         self.description = try container.decode(String.self, forKey: .description)
-        self.photo = try container.decode(String.self, forKey: .photo)
+        self.id = try container.decode(String.self, forKey: .id)
         
     }
 }

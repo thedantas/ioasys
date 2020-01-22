@@ -21,6 +21,6 @@ class EnterpriseStorageImpl: EnterpriseStorage {
     func search(_ query: String) -> Single<[Enterprise]> {
         return self.service.search(query)
             .map(EnterpriseResponse.self)
-            .map { $0.result }
+            .map { $0.enterprise }
     }
 }

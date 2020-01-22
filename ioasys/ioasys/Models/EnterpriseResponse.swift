@@ -9,6 +9,5 @@
 import Foundation
 
 struct EnterpriseResponse: Decodable {
-    let total: Int
-    let result: [Enterprise]
+    let enterprise: [Enterprise]
 }

@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Alamofire
 
 //MARK: Protocol Splah
 protocol SplashDelegate: class {
@@ -33,6 +34,7 @@ class SplashViewController: UIViewController {
     weak var delegate: SplashDelegate?
     var animators: [UIViewPropertyAnimator] = []
     let localStorage: UserDefaultsDataStorage
+    var viewModel: AuthUserViewModel!
     
     //MARK: Cycle Life
     init(localStorage: UserDefaultsDataStorage) {
@@ -46,7 +48,8 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        AuthUserRouterProvider.login("","")
+        self.setupViewModel()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +61,45 @@ class SplashViewController: UIViewController {
 //MARK: Extension
 extension SplashViewController {
     
+    func setupViewModel(){
+        self.viewModel = AuthUserViewModel()
+        let serverUrl = "/Test/login"
+        teste()
+
+    }
+    func teste(){
+         let email = "testeapple@ioasys.com.br"
+         let password = "12341234"
+        
+       // let vcbMasuk = HomeTabBarController()
+        let urlLis = "https://empresas.ioasys.com.br/api/v1/users/auth/sign_in"
+        
+        let parameter: Parameters = [
+            "email": email,
+            "password": password
+        ]
+        
+  
+            Alamofire.request(urlLis, method: .post, parameters: parameter, encoding: URLEncoding.default, headers: nil)
+                .validate(statusCode: 200..<300)
+                .responseJSON { response in
+                    
+                    switch response.result {
+                    case .success(let data):
+                        print("isi: \(data)")
+                        print(response)
+                        
+                     //   self.navigationController?.pushViewController(vcbMasuk, animated: true)
+                        
+                    case .failure(let error):
+                    print("oi")
+                        
+                      //  self.present(alert, animated: true, completion: nil)
+                        print("need text")
+                        print("Request failed with error: \(error)")
+                 }
+            }
+    }
     func configureViews() {
         self.continueButton.layer.cornerRadius = 5.0
         self.continueButton.rx.tap.bind {

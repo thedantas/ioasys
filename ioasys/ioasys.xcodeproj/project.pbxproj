@@ -58,6 +58,8 @@
 		5001BBBC23D2549D009298BA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BBBB23D2549D009298BA /* MainViewModel.swift */; };
 		5001BBBE23D254DC009298BA /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BBBD23D254DC009298BA /* SearchViewModel.swift */; };
 		5001BBC023D254ED009298BA /* EnterpriseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BBBF23D254ED009298BA /* EnterpriseViewModel.swift */; };
+		506E8C0A23D8BE3300386F28 /* AuthUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E8C0923D8BE3300386F28 /* AuthUserViewModel.swift */; };
+		506E8C0C23D8C76100386F28 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E8C0B23D8C76100386F28 /* Login.swift */; };
 		50DDB0D423D761D700F576A7 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DDB0D323D761D700F576A7 /* Random.swift */; };
 		50F84D4823D1E9B5006FCB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D4723D1E9B5006FCB10 /* AppDelegate.swift */; };
 		50F84D4A23D1E9B5006FCB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F84D4923D1E9B5006FCB10 /* SceneDelegate.swift */; };
@@ -139,6 +141,8 @@
 		5001BBBB23D2549D009298BA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5001BBBD23D254DC009298BA /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		5001BBBF23D254ED009298BA /* EnterpriseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseViewModel.swift; sourceTree = "<group>"; };
+		506E8C0923D8BE3300386F28 /* AuthUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserViewModel.swift; sourceTree = "<group>"; };
+		506E8C0B23D8C76100386F28 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		50DDB0D323D761D700F576A7 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		50F84D4423D1E9B5006FCB10 /* ioasys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ioasys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F84D4723D1E9B5006FCB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -300,6 +304,7 @@
 		5001BB9023D24F19009298BA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				506E8C0823D8BE1900386F28 /* AuthUserViewModel */,
 				5001BBBA23D25482009298BA /* EnterpriseViewModel */,
 				5001BBB923D25475009298BA /* SearchViewModel */,
 				5001BBB823D2540F009298BA /* MainViewModel */,
@@ -398,6 +403,14 @@
 			path = EnterpriseViewModel;
 			sourceTree = "<group>";
 		};
+		506E8C0823D8BE1900386F28 /* AuthUserViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				506E8C0923D8BE3300386F28 /* AuthUserViewModel.swift */,
+			);
+			path = AuthUserViewModel;
+			sourceTree = "<group>";
+		};
 		50F84D3B23D1E9B5006FCB10 = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +476,7 @@
 				5001BB8C23D24D2D009298BA /* EnterpriseRouterProvider.swift */,
 				0B60BBE123D31AB1003BDCBC /* AuthUserService.swift */,
 				0B60BBDD23D31A7E003BDCBC /* AuthUserRouter.swift */,
+				506E8C0B23D8C76100386F28 /* Login.swift */,
 				0B60BBE323D31AD0003BDCBC /* AuthUserRouterProvider.swift */,
 			);
 			path = Services;
@@ -724,6 +738,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				506E8C0C23D8C76100386F28 /* Login.swift in Sources */,
 				5001BB7723D233BF009298BA /* UILabel+Rx.swift in Sources */,
 				5001BBAD23D25287009298BA /* MainView.swift in Sources */,
 				0BA6B7F823D6844100201BEF /* EnterpriseStorageImpl.swift in Sources */,
@@ -771,6 +786,7 @@
 				0B60BBDE23D31A7E003BDCBC /* AuthUserRouter.swift in Sources */,
 				5001BB8323D23430009298BA /* Keyboard+Utils.swift in Sources */,
 				5001BB7123D2332B009298BA /* NSObject+Rx.swift in Sources */,
+				506E8C0A23D8BE3300386F28 /* AuthUserViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
