@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B45F0F923D9A18100D5540D /* HeaderView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45F0F823D9A18100D5540D /* HeaderView+Rx.swift */; };
 		0B60BBDE23D31A7E003BDCBC /* AuthUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B60BBDD23D31A7E003BDCBC /* AuthUserRouter.swift */; };
 		0B60BBE223D31AB1003BDCBC /* AuthUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B60BBE123D31AB1003BDCBC /* AuthUserService.swift */; };
 		0B60BBE423D31AD0003BDCBC /* AuthUserRouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B60BBE323D31AD0003BDCBC /* AuthUserRouterProvider.swift */; };
@@ -91,7 +90,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B45F0F823D9A18100D5540D /* HeaderView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeaderView+Rx.swift"; sourceTree = "<group>"; };
 		0B60BBDD23D31A7E003BDCBC /* AuthUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserRouter.swift; sourceTree = "<group>"; };
 		0B60BBE123D31AB1003BDCBC /* AuthUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserService.swift; sourceTree = "<group>"; };
 		0B60BBE323D31AD0003BDCBC /* AuthUserRouterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserRouterProvider.swift; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 				5001BB8423D2379D009298BA /* UIView+Contraints.swift */,
 				50DDB0D323D761D700F576A7 /* Random.swift */,
 				5001BB8623D237CB009298BA /* UIView+Rotate.swift */,
-				0B45F0F823D9A18100D5540D /* HeaderView+Rx.swift */,
 				5001BB8823D237D9009298BA /* String+Utils.swift */,
 			);
 			path = Utils;
@@ -508,6 +505,7 @@
 				50F84D4123D1E9B5006FCB10 /* Frameworks */,
 				50F84D4223D1E9B5006FCB10 /* Resources */,
 				7F62AC8F73729E43FE74E141 /* [CP] Embed Pods Frameworks */,
+				5055649023D9C33800BC2C07 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -678,6 +676,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5055649023D9C33800BC2C07 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		7256EB804F898ABC22CC53F5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -786,7 +802,6 @@
 				5001BBB223D2530E009298BA /* EnterpriseCell.swift in Sources */,
 				5001BB6723D231C2009298BA /* EnterpriseResponse.swift in Sources */,
 				5001BB6F23D2323C009298BA /* AuthUserResponse.swift in Sources */,
-				0B45F0F923D9A18100D5540D /* HeaderView+Rx.swift in Sources */,
 				0B60BBDE23D31A7E003BDCBC /* AuthUserRouter.swift in Sources */,
 				5001BB8323D23430009298BA /* Keyboard+Utils.swift in Sources */,
 				5001BB7123D2332B009298BA /* NSObject+Rx.swift in Sources */,

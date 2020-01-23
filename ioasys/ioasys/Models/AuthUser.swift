@@ -7,38 +7,19 @@
 //
 
 import Foundation
+import UIKit
+import ObjectMapper
 
-struct AuthUser: Decodable {
-    //MARK: Variables
-    let id: String
-    let login: String
-    let password: String
-
-    //MARK: Enum
-    enum CodingKeys: String, CodingKey {
-        case id
-        case login
-        case password
-
-    }
-
-    //MARK: Init
-    init(category: [String] = [],
-         id: String = "",
-         login: String = "",
-         password: String = "") {
-        self.id = id
-        self.login = login
-        self.password = password
-    }
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-
-        self.id = try container.decode(String.self, forKey: .id)
-        self.login  = try container.decode(String.self, forKey: .login)
-        self.password = try container.decode(String.self, forKey: .password)
-
+class AuthUser: Mappable {
+    var client: String?
+    var uid: String?
+    var token: String?
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        client <- map["client"]
+        uid <- map["uid"]
+        token <- map["access-token"]
     }
 }
-

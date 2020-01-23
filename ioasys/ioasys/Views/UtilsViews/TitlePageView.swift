@@ -18,7 +18,6 @@ class HeaderView: UIView {
     let minHeight: CGFloat = 72
     var heightConstraint: NSLayoutConstraint!
     var search: Driver<String>!
-    var fractionComplete: CGFloat = 0.0
     
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 30, height: self.maxHeight)

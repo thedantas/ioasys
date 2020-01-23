@@ -45,7 +45,7 @@ extension EnterpriseRouter: TargetType {
                 ] as [String: Any]
             return jsonSerializedUTF8(json: data)
         case .categories:
-            let data = ["animal", "career", "celebrity"]
+            let data = ["argentina", "brasil", "soja"]
                        return arrayJsonSerializedUTF8(json: data)
         }
     }
@@ -56,7 +56,6 @@ extension EnterpriseRouter: TargetType {
             return ["&name": query]
         case .categories:
         return nil
-            
         }
     }
     
@@ -71,7 +70,12 @@ extension EnterpriseRouter: TargetType {
     var headers: [String: String]? {
 
         let authenticationHeaders = ["access-token": UserDefaults.standard.string(forKey: "access-token"), "client": UserDefaults.standard.string(forKey: "client"), "uid": UserDefaults.standard.string(forKey: "uid")]
-        return (authenticationHeaders as! [String : String])
+        if authenticationHeaders is [String : String] {
+            return authenticationHeaders as? [String : String]
+        } else {
+            return (authenticationHeaders as? [String : String])
+            
+        }
     }
 }
 
