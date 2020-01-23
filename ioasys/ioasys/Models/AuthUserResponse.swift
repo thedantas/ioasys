@@ -21,7 +21,8 @@ struct ConstantsLogin {
 class AuthUserResponse {
 
   var extraHeaders: [String: String]?
-   func loginAuthentication(){
+    
+      func loginAuthentication() {
        let email = "testeapple@ioasys.com.br"
        let password = "12341234"
        let urlLogin = "https://empresas.ioasys.com.br/api/v1/users/auth/sign_in"
@@ -44,7 +45,7 @@ class AuthUserResponse {
            UserDefaults.standard.set(uu?.client, forKey: "client")
            UserDefaults.standard.set(uu?.uid, forKey: "uid")
            UserDefaults.standard.set(uu?.token, forKey: "access-token")
-      
+      print(uu)
            switch response.result {
            case .success(let data):
                print("POST: \(data)")

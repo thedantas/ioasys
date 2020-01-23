@@ -41,7 +41,7 @@ class SearchViewModel {
             .asDriver(onErrorJustReturn: [])
         
         self.isRecentSearchHidden = self.recentSearch
-            .map { $0.count == 0 }
+            .map { $0.isEmpty == true }
             .startWith(true)
         
         self.categories = categoriesResult

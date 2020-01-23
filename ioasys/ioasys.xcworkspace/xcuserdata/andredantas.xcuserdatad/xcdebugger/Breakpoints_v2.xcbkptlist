@@ -50,38 +50,6 @@
             endingLineNumber = "19"
             landmarkName = "CodingKeys"
             landmarkType = "13">
-            <Locations>
-               <Location
-                  uuid = "0F046846-0E9F-40AE-89F8-4E92C3BB2A19 - 64e111aea87f2272"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ioasys.Enterprise.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;ioasys.Enterprise.CodingKeys&gt;"
-                  moduleName = "ioasys"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andredantas/Documents/GitHub/ioasys/ioasys/ioasys/Models/Enterprise.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  uuid = "0F046846-0E9F-40AE-89F8-4E92C3BB2A19 - daf622614aa11dee"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ioasys.Enterprise.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "ioasys"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andredantas/Documents/GitHub/ioasys/ioasys/ioasys/Models/Enterprise.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "92">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -98,38 +66,6 @@
             endingLineNumber = "20"
             landmarkName = "CodingKeys"
             landmarkType = "13">
-            <Locations>
-               <Location
-                  uuid = "87A12573-0C6C-4C07-BB55-D312B13797C2 - 64e111aea87f2272"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ioasys.Enterprise.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;ioasys.Enterprise.CodingKeys&gt;"
-                  moduleName = "ioasys"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andredantas/Documents/GitHub/ioasys/ioasys/ioasys/Models/Enterprise.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "128">
-               </Location>
-               <Location
-                  uuid = "87A12573-0C6C-4C07-BB55-D312B13797C2 - daf622614aa11dee"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ioasys.Enterprise.CodingKeys.rawValue.getter : Swift.String"
-                  moduleName = "ioasys"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andredantas/Documents/GitHub/ioasys/ioasys/ioasys/Models/Enterprise.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "128">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -146,6 +82,54 @@
             endingLineNumber = "24"
             landmarkName = "errorDescription"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54761910-C718-4FB1-AEF3-9E3DD9743DD6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ioasys/Models/AuthUserResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "loginAuthentication()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7CBFF5C9-4533-4C97-9C18-59B0AA86AD3A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ioasys/Models/AuthUserResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "loginAuthentication()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F9F576D-D741-464B-9247-6A24034AE382"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ioasys/Models/AuthUserResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "loginAuthentication()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

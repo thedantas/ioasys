@@ -31,7 +31,7 @@ class SplashViewController: UIViewController {
     weak var delegate: SplashDelegate?
     var animators: [UIViewPropertyAnimator] = []
     let localStorage: UserDefaultsDataStorage
-    var viewModel: AuthUserResponse!
+    let viewModel = AuthUserResponse()
     
     //MARK: Cycle Life
     init(localStorage: UserDefaultsDataStorage) {
@@ -46,7 +46,6 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViewModel()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,9 +57,10 @@ class SplashViewController: UIViewController {
 //MARK: Extension
 extension SplashViewController {
     
-    func setupViewModel(){
+    func setupViewModel() {
         viewModel.loginAuthentication()
-    
+        
+      
     }
    
     func configureViews() {
