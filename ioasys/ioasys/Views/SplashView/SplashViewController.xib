@@ -34,7 +34,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZx-OA-XXu">
                             <rect key="frame" x="20" y="540" width="382" height="45"/>
-                            <color key="backgroundColor" red="0.059030868110000002" green="0.68447476630000004" blue="0.2510572076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.33915355800000002" green="0.73442149160000003" blue="0.73629248140000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="WXF-KG-szo"/>
                             </constraints>
@@ -43,17 +43,17 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_ioasys" translatesAutoresizingMaskIntoConstraints="NO" id="1b0-Sd-MK2">
-                            <rect key="frame" x="130.5" y="35" width="164" height="38"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHome" translatesAutoresizingMaskIntoConstraints="NO" id="1b0-Sd-MK2">
+                            <rect key="frame" x="130.5" y="35" width="164" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="38" id="651-JM-CRp"/>
                                 <constraint firstAttribute="width" constant="164.30000000000001" id="C1S-6H-RxV"/>
+                                <constraint firstAttribute="height" constant="50" id="OKG-0L-8aC"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASHAUHSUAHS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSr-og-1PB">
-                            <rect key="frame" x="112" y="107" width="201" height="19"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me contratem para eu terminar de arrumar esse app.  :D" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSr-og-1PB">
+                            <rect key="frame" x="112" y="119" width="201" height="54"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="19" id="I15-Ks-4VJ"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cJN-b7-hKS"/>
                                 <constraint firstAttribute="width" constant="201" id="ia8-8y-3cR"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -66,7 +66,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.91786783930000004" green="0.91507709029999995" blue="0.83580535649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="AZx-OA-XXu" firstAttribute="leading" secondItem="f9g-Il-zcM" secondAttribute="leading" constant="20" id="9YI-sA-1C2"/>
                         <constraint firstItem="1b0-Sd-MK2" firstAttribute="top" secondItem="f9g-Il-zcM" secondAttribute="top" constant="35" id="9qJ-n5-5Hl"/>
@@ -149,8 +149,8 @@
         </view>
     </objects>
     <resources>
-        <image name="icCadeado" width="16" height="16"/>
-        <image name="icEmail" width="16" height="16"/>
-        <image name="logo_ioasys" width="320" height="150"/>
+        <image name="icCadeado" width="25" height="25"/>
+        <image name="icEmail" width="25" height="25"/>
+        <image name="logoHome" width="159" height="38"/>
     </resources>
 </document>
