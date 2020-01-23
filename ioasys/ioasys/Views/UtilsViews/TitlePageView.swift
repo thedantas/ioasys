@@ -24,8 +24,16 @@ class HeaderView: UIView {
         return CGSize(width: 30, height: self.maxHeight)
     }
     
+    var fractionComplete: CGFloat = 0.0 {
+        didSet {
+           self.animator?.fractionComplete = fractionComplete
+        }
+    }
+    private var animator: UIViewPropertyAnimator?
+    private var expandAnimator: UIViewPropertyAnimator?
+    
     private let logo: UIImageView = {
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "norristones_logo"))
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "logo_ioasys") )
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -44,7 +52,6 @@ class HeaderView: UIView {
     
     let searchButton: UIButton = {
         let button = UIButton()
-      //  button.setImage(#imageLiteral(resourceName: "search"), for: .normal)
         button.accessibilityIdentifier = "search_button"
         return button
     }()
@@ -75,7 +82,7 @@ class HeaderView: UIView {
     private func setupViews() {
         self.backgroundColor = .clear
         self.setupConstraints()
-        self.searchTextField.placeholder = "Research a fact"
+        self.searchTextField.placeholder = "Research"
         self.setupBindings()
     }
     
@@ -94,6 +101,15 @@ class HeaderView: UIView {
             .asDriver(onErrorJustReturn: "")
     }
     
+    func collapse() {
+          self.animator?.startAnimation()
+      }
+      
+      func expand() {
+          //figure out a way to do this animated
+          self.fractionComplete = 0.0
+      }
+      
     private func setupConstraints() {
         
         self.addSubview(self.blurView)
@@ -110,9 +126,9 @@ class HeaderView: UIView {
         
         self.blurView.pinEdgesToSuperview()
         
-        self.logo.pinLeft(85.0)
-        self.logo.pinBottom(50.0)
-        self.logo.pinRight(85.0)
+        self.logo.pinLeft(30.0)
+              self.logo.pinBottom(50.0)
+              self.logo.pinRight(140.0)
         
         self.searchTextField.pinLeft(20.0)
         self.searchTextField.pinRight(20.0)
@@ -128,7 +144,16 @@ class HeaderView: UIView {
         self.bottomLine.pinRight()
         self.bottomLine.pinLeft()
         self.bottomLine.pinBottom()
-    
+        
+        var topPadding: CGFloat = 0.0
+        
+        if #available(iOS 11.0, *) {
+            if let bla = UIApplication.shared.delegate!.window {
+                topPadding = bla?.safeAreaInsets.top ?? 0.0
+            }
+            
+        }
+        
         self.heightConstraint = self.constraintHeight(self.maxHeight)
         
         self.layoutIfNeeded()

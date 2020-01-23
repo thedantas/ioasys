@@ -17,6 +17,10 @@ class EnterpriseStorageImpl: EnterpriseStorage {
     init(service: EnterpriseService) {
         self.service = service
     }
+    func categories() -> Single<[String]> {
+        return self.service.categories()
+            .map([String].self)
+    }
     
     func search(_ query: String) -> Single<[Enterprise]> {
         return self.service.search(query)

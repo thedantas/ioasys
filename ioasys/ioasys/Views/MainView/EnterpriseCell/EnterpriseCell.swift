@@ -10,11 +10,11 @@ import Foundation
 import Reusable
 
 //MARK: Protocol
-protocol NorrisFactCellDelegate: class {
+protocol EnterpriseCellDelegate: class {
     func share(image: UIImage?)
 }
 
-class NorrisFactCell: UITableViewCell, NibReusable {
+class EnterpriseCell: UITableViewCell, NibReusable {
     
     //MARK: Outlets
     @IBOutlet weak var factLabel: UILabel!
@@ -23,7 +23,7 @@ class NorrisFactCell: UITableViewCell, NibReusable {
     @IBOutlet weak var categoriesCloudView: CategoriesTagView!
     
     //MARK: Variables
-    weak var delegate: NorrisFactCellDelegate?
+    weak var delegate: EnterpriseCellDelegate?
     var viewModel = EnterpriseItemViewModel()
     
     //MARK: Functions
@@ -41,7 +41,7 @@ class NorrisFactCell: UITableViewCell, NibReusable {
     }
     
     func setupBindings() {
-        self.viewModel.text
+        self.viewModel.enterprise_name
             .drive(factLabel.rx.text)
             .disposed(by: rx.disposeBag)
         
@@ -49,9 +49,9 @@ class NorrisFactCell: UITableViewCell, NibReusable {
             .drive(backgroundImage.rx.image)
             .disposed(by: rx.disposeBag)
 
-        self.viewModel.fontSize
-            .drive(factLabel.rx.fontSize)
-            .disposed(by: rx.disposeBag)
+//        self.viewModel.id
+//            .drive(factLabel.rx.fontSize)
+//            .disposed(by: rx.disposeBag)
         
         self.shareButton.rx.tap.bind { [weak self] in
             let image = self?.asImage()

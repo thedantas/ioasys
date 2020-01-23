@@ -11,5 +11,6 @@ import Moya
 
 //MARK: Protocol
 protocol EnterpriseService {
+     func categories()-> Single<Response>
     func search(_ query: String) -> Single<Response>
 }

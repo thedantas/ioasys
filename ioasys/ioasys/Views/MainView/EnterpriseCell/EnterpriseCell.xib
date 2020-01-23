@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="323" id="DfX-D8-9mC" customClass="NorrisFactCell" customModule="ChuckNorris" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="323" id="DfX-D8-9mC" customClass="EnterpriseCell" customModule="ioasys" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="499" height="522"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DfX-D8-9mC" id="v4J-8R-xoD">
@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPn-f6-fvB">
                         <rect key="frame" x="0.0" y="5" width="499" height="512"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxH-0b-oWV" customClass="CategoriesTagView" customModule="ChuckNorris" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxH-0b-oWV" customClass="CategoriesTagView" customModule="ioasys" customModuleProvider="target">
                                 <rect key="frame" x="8" y="464" width="419" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -75,10 +75,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="backgroundImage" destination="gBq-G8-xm0" id="9xx-66-0bd"/>
-                <outlet property="categoriesCloudView" destination="YxH-0b-oWV" id="hRJ-Rz-tin"/>
-                <outlet property="factLabel" destination="MQb-Qh-Mo8" id="eTK-UU-zZu"/>
-                <outlet property="shareButton" destination="Lyx-eS-uTh" id="h1x-9o-lAv"/>
+                <outlet property="backgroundImage" destination="gBq-G8-xm0" id="d6v-Ps-I1c"/>
+                <outlet property="categoriesCloudView" destination="YxH-0b-oWV" id="VrG-Qa-Hzw"/>
+                <outlet property="factLabel" destination="MQb-Qh-Mo8" id="scV-F8-cBP"/>
+                <outlet property="shareButton" destination="Lyx-eS-uTh" id="ILb-z3-I7F"/>
             </connections>
             <point key="canvasLocation" x="-50.000000000000007" y="60.267857142857139"/>
         </tableViewCell>

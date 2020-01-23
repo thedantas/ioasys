@@ -20,7 +20,7 @@ class StartView: UIView, StateSubview {
     let label: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "You need to wear the facts of legend Chuck Norris"
+        label.text = "You need to search for companies!"
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.numberOfLines = 0
         label.textAlignment = .center

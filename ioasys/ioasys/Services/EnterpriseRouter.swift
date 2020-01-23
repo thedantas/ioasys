@@ -10,7 +10,8 @@ import Moya
 
 //MARK: Enum
 enum EnterpriseRouter {
-    case search(String)
+    case enterprises(String)
+    case categories
 }
 
 //MARK: Extension
@@ -23,32 +24,39 @@ extension EnterpriseRouter: TargetType {
     
     var path: String {
         switch self {
-        case .search:
+        case .enterprises:
             return "/enterprises"
+        case .categories:
+             return "/enterprises"
         }
     }
     
     var method: Method {
         return .get
     }
-
+   
     var sampleData: Data {
         switch self {
-        case .search:
-            let data = ["total": 6,
-                        "result": [["category": ["dev"],
+        case .enterprises:
+            let data = ["enterprises": [
                                     "id": "id",
-                                    "url": "thedantas.com",
-                                    "value": "blablabla"]
-                ]] as [String: Any]
+                                    "enterprise_name": "thedantas.com",
+                                    "description": "blablabla"]
+                ] as [String: Any]
             return jsonSerializedUTF8(json: data)
+        case .categories:
+            let data = ["animal", "career", "celebrity"]
+                       return arrayJsonSerializedUTF8(json: data)
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .search(let query):
+        case .enterprises(let query):
             return ["&name": query]
+        case .categories:
+        return nil
+            
         }
     }
     
@@ -62,8 +70,8 @@ extension EnterpriseRouter: TargetType {
     
     var headers: [String: String]? {
 
-         let authenticationHeaders = ["access-token": "bgUkCJbP-K4zlyICQ6Mi7Q", "client": "OF4_wOKMesMpPt6SoTc4ew", "uid": "testeapple@ioasys.com.br"]
-        return authenticationHeaders
+        let authenticationHeaders = ["access-token": UserDefaults.standard.string(forKey: "access-token"), "client": UserDefaults.standard.string(forKey: "client"), "uid": UserDefaults.standard.string(forKey: "uid")]
+        return (authenticationHeaders as! [String : String])
     }
 }
 

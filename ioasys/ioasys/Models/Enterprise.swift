@@ -16,18 +16,17 @@ struct Enterprise: Decodable {
 
     //MARK: Enum
     enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case enterprise_name = "enterprise_name"
-        case description = "description"
+        case id
+        case enterprise_name
+        case description
     
     }
     
     //MARK: Init
-    init(category: [String] = [],
-         photo: String = "",
+    init(id: String = "",
          enterprise_name: String = "",
          description: String = "") {
-        self.id = photo
+        self.id = id
         self.enterprise_name = enterprise_name
         self.description = description
     }

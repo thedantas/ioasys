@@ -18,6 +18,7 @@ target 'ioasys' do
   pod 'RxSwiftUtilities', '~> 2.0.1'
   pod 'lottie-ios'
   pod 'RxSwiftExt'
+  pod 'ObjectMapper'
 
   target 'ioasysTests' do
     inherit! :search_paths

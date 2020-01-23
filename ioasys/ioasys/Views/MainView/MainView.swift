@@ -64,7 +64,7 @@ extension MainView {
     
     func configureViews() {
         self.tableView.contentInset.top = 140
-        self.tableView.register(cellType: NorrisFactCell.self)
+        self.tableView.register(cellType: EnterpriseCell.self)
         self.tableView.backgroundColor = .clear
         self.tableView.estimatedRowHeight = 200
         self.tableView.rowHeight = UITableView.automaticDimension
@@ -76,10 +76,10 @@ extension MainView {
     
     func setupBindings() {
     
-        self.viewModel.results
+        self.viewModel.enterprises
             .drive(tableView.rx
-                .items(cellIdentifier: "NorrisFactCell",
-                       cellType: NorrisFactCell.self)) { [weak self] _, element, cell in
+                .items(cellIdentifier: "EnterpriseCell",
+                       cellType: EnterpriseCell.self)) { [weak self] _, element, cell in
                         cell.bind(element)
                         cell.delegate = self
             }.disposed(by: rx.disposeBag)
@@ -155,7 +155,7 @@ extension MainView {
     }
 }
 
-extension MainView: NorrisFactCellDelegate {
+extension MainView: EnterpriseCellDelegate {
     func share(image: UIImage?) {
         let imageShare = [ image! ]
         let activityViewController = UIActivityViewController(activityItems: imageShare, applicationActivities: nil)

@@ -22,7 +22,10 @@ class NorrisServiceRouterProvider: EnterpriseService {
     
     //MARK: Functions
     func search(_ query: String) -> Single<Response> {
-        return self.provider.rx.request(.search(query))
+        return self.provider.rx.request(.enterprises(query))
     }
+    func categories() -> Single<Response> {
+           return self.provider.rx.request(.categories)
+       }
 }
 

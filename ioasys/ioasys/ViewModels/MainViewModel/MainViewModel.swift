@@ -14,7 +14,7 @@ import RxSwiftExt
 
 class MainViewModel {
     
-    let results: Driver<[Enterprise]>
+    let enterprises: Driver<[Enterprise]>
     let searchError: Driver<Error>
     let isSearchShown: PublishSubject<Bool>
     
@@ -63,7 +63,7 @@ class MainViewModel {
                     .materialize() //converts error and onNext to events
             }.share()
         
-        self.results = searchResult
+        self.enterprises = searchResult
             .elements()
             .startWith([])
             .asDriver(onErrorJustReturn: [])
@@ -72,13 +72,13 @@ class MainViewModel {
             .errors()
             .asDriver(onErrorJustReturn: EnterpriseError())
         
-        self.viewState = MainViewModel.viewState(results: results, error: searchError, isLoading: isLoading)
+        self.viewState = MainViewModel.viewState(results: enterprises, error: searchError, isLoading: isLoading)
         
         let searchShownDriver = isSearchShown.asDriver(onErrorJustReturn: false)
         
         //weather state view is hidden or shown
         self.isViewStateHidden = Driver
-            .combineLatest(self.results,
+            .combineLatest(self.enterprises,
                            searchShownDriver,
                            self.isLoading) { results, searchShown, isLoading in
                 if searchShown { return true }

@@ -14,26 +14,24 @@ class EnterpriseItemViewModel {
     
     let enterprise: PublishSubject<Enterprise>
     
-    let text: Driver<String>
+    let id: Driver<String>
     let description: Driver<String>
     let backgroundImage: Driver<UIImage?>
-    let fontSize: Driver<CGFloat>
+    let enterprise_name: Driver<String>
 
     
     init() {
         self.enterprise = PublishSubject<Enterprise>()
         
-        self.text = self.enterprise
-            .map { $0.enterprise_name }
+        self.id = self.enterprise
+            .map { $0.id }
             .asDriver(onErrorJustReturn: "")
         
       self.backgroundImage = Driver.just(Random.image)
         
-        self.fontSize = self.text
-            .map {
-                return $0.count < 80 ?
-                    Constants.largeFontSize : Constants.mediumFontSize
-        }
+        self.enterprise_name = self.enterprise
+        .map { $0.enterprise_name }
+                       .asDriver(onErrorJustReturn: "")
         
         self.description = self.enterprise
             .map { $0.description }

@@ -10,6 +10,7 @@ import RxSwift
 import Moya
 
 protocol EnterpriseStorage: class {
+    func categories() -> Single<[String]>
     func search(_ query: String) -> Single<[Enterprise]>
 }
 

@@ -15,8 +15,7 @@ class AuthUserRouterProvider: AuthUserService {
     func login(_ login: String, _ password: String) -> Single<Response> {
         return self.provider.rx.request(.search(login, password))
     }
-    
-    
+
     //MARK: Variables
     //let provider: MoyaProvider<AuthUserRouter>
     var provider = MoyaProvider<AuthUserRouter>(plugins: [CredentialsPlugin { _ -> URLCredential? in
@@ -29,7 +28,6 @@ class AuthUserRouterProvider: AuthUserService {
         self.provider = provider
     }
     
-    //MARK: Functions
 
 }
 

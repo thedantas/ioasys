@@ -53,7 +53,7 @@ extension SearchView {
     
     func setupViewModel() {
         self.viewModel = SearchViewModel(
-            enterpriseStorage: self.enterpriseStorage,
+            norrisStorage: self.enterpriseStorage,
             localStorage: self.localStorage)
     }
     
